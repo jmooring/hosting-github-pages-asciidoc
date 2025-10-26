@@ -1,0 +1,7 @@
+---
+title: Straßen (de)
+---
+[goat]
+....
+{{% param title %}}
+....

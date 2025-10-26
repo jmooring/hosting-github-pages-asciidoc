@@ -1,0 +1,7 @@
+---
+title: Home (de)
+---
+[goat]
+....
+{{% param title %}}
+....

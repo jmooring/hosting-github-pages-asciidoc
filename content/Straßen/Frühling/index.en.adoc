@@ -1,0 +1,7 @@
+---
+title: Frühling (en)
+---
+[goat]
+....
+{{% param title %}}
+....

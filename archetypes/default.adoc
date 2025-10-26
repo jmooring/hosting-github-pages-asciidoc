@@ -1,0 +1,7 @@
+---
+title: {{ replace .File.ContentBaseName "-" " " | strings.FirstUpper }}
+---
+[goat]
+....
+{{% param title %}}
+....
