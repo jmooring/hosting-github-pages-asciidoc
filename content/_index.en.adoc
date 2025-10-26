@@ -1,0 +1,9 @@
+---
+title: Home (en)
+---
+[plantuml]
+....
+@startuml
+"{{% param title %}}"
+@enduml
+....

@@ -1,0 +1,9 @@
+---
+title: Frühling (de)
+---
+[plantuml]
+....
+@startuml
+"{{% param title %}}"
+@enduml
+....

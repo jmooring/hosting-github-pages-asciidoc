@@ -1,0 +1,9 @@
+---
+title: Straßen (de)
+---
+[plantuml]
+....
+@startuml
+"{{% param title %}}"
+@enduml
+....

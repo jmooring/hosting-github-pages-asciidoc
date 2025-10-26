@@ -1,0 +1,9 @@
+---
+title: Müll Brücke (de)
+---
+[plantuml]
+....
+@startuml
+"{{% param title %}}"
+@enduml
+....

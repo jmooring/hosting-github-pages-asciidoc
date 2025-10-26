@@ -1,0 +1,9 @@
+---
+title: S2 (de)
+---
+[plantuml]
+....
+@startuml
+"{{% param title %}}"
+@enduml
+....

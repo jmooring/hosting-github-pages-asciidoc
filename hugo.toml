@@ -1,0 +1,53 @@
+baseURL                        = 'https://jmooring.github.io/hosting-github-pages-asciidoc/'
+disableKinds                   = ['rss', 'sitemap', 'taxonomy', 'term']
+defaultContentLanguage         = 'en'
+defaultContentLanguageInSubdir = true
+
+[languages.en]
+  disable           = false
+  languageCode      = 'en-US'
+  languageDirection = 'ltr'
+  languageName      = 'English'
+  weight            = 1
+  title             = 'Hosting Test - GitHub Pages - AsciiDoc (en)'
+
+[languages.de]
+  disable           = false
+  languageCode      = 'de-DE'
+  languageDirection = 'ltr'
+  languageName      = 'Deutsch'
+  weight            = 2
+  title             = 'Hosting Test - GitHub Pages - AsciiDoc (de)'
+
+[markup.asciidocext]
+  extensions           = ['asciidoctor-diagram']
+  workingFolderCurrent = true
+
+  [markup.asciidocext.attributes]
+    diagram-cachedir = "resources/_gen/asciidoctor/diagrams"
+
+[[menus.main]]
+  name    = 'Home'
+  pageRef = '/'
+  weight  = 10
+
+[[menus.main]]
+  name    = 'S1'
+  pageRef = '/s1'
+  weight  = 20
+
+[[menus.main]]
+  name    = 'S2'
+  pageRef = '/s2'
+  weight  = 30
+
+[[menus.main]]
+  name    = 'Straßen'
+  pageRef = '/Straßen'
+  weight  = 30
+
+[security.exec]
+  allow = ['^((dart-)?sass|git|go|npx|postcss|tailwindcss|asciidoctor)$']
+
+[uglyURLs]
+  s1 = false
