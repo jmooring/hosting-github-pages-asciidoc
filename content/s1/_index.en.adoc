@@ -1,9 +1,7 @@
 ---
 title: S1 (en)
 ---
-[plantuml]
+[goat]
 ....
-@startuml
-"{{% param title %}}"
-@enduml
+{{% param title %}}
 ....

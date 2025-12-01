@@ -23,9 +23,6 @@ defaultContentLanguageInSubdir = true
   extensions           = ['asciidoctor-diagram']
   workingFolderCurrent = true
 
-  [markup.asciidocext.attributes]
-    diagram-cachedir = "resources/_gen/asciidoctor/diagrams"
-
 [[menus.main]]
   name    = 'Home'
   pageRef = '/'

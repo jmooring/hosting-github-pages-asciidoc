@@ -1,9 +1,7 @@
 ---
 title: Home (en)
 ---
-[plantuml]
+[goat]
 ....
-@startuml
-"{{% param title %}}"
-@enduml
+{{% param title %}}
 ....

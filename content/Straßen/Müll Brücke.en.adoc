@@ -1,9 +1,7 @@
 ---
 title: Müll Brücke (en)
 ---
-[plantuml]
+[goat]
 ....
-@startuml
-"{{% param title %}}"
-@enduml
+{{% param title %}}
 ....

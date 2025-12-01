@@ -19,12 +19,10 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ASCIIDOCTOR_VERSION: '2.0.26'
-      ASCIIDOCTOR_DIAGRAM_VERSION: '3.0.1'
-      ASCIIDOCTOR_DIAGRAM_PLANTUML_VERSION: '1.2025.3'
+      ASCIIDOCTOR_DIAGRAM_VERSION: '3.1.0'
       DART_SASS_VERSION: '1.93.3'
       GO_VERSION: '1.25.4'
       HUGO_VERSION: '0.152.2'
-      JAVA_VERSION: '25'
       NODE_VERSION: '24.11.0'
       RUBY_VERSION: '3.4.5'
       TZ: Europe/Oslo
@@ -39,12 +37,6 @@ jobs:
         with:
           go-version: ${{ env.GO_VERSION }}
           cache: false
-      - name: Setup Java
-        uses: actions/setup-java@v5
-        with:
-          distribution: temurin
-          java-version: ${{ env.JAVA_VERSION }}
-          java-package: jre
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -53,11 +45,12 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ env.RUBY_VERSION }}
-      - name: Install gems
+      - name: Install Ruby gems
         run: |
           gem install asciidoctor -v ${{ env.ASCIIDOCTOR_VERSION }}
           gem install asciidoctor-diagram -v ${{ env.ASCIIDOCTOR_DIAGRAM_VERSION }}
-          gem install asciidoctor-diagram-plantuml -v ${{ env.ASCIIDOCTOR_DIAGRAM_PLANTUML_VERSION }}
+      - name: Install GoAT
+        run: go install github.com/blampe/goat/cmd/goat@177de93b192b8ffae608e5d9ec421cc99bf68402
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
