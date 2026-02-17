@@ -20,10 +20,10 @@ jobs:
     env:
       ASCIIDOCTOR_VERSION: '2.0.26'
       ASCIIDOCTOR_DIAGRAM_VERSION: '3.1.0'
-      DART_SASS_VERSION: '1.97.1'
-      GO_VERSION: '1.25.5'
-      HUGO_VERSION: '0.153.3'
-      NODE_VERSION: '24.12.0'
+      DART_SASS_VERSION: '1.97.3'
+      GO_VERSION: '1.26.0'
+      HUGO_VERSION: '0.155.3'
+      NODE_VERSION: '24.13.1'
       RUBY_VERSION: '3.4.5'
       TZ: Europe/Oslo
     steps:
@@ -95,7 +95,7 @@ jobs:
             hugo-
       - name: Build the site
         run: |
-          hugo \
+          hugo build \
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
