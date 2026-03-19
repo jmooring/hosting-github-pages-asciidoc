@@ -3,25 +3,37 @@ disableKinds                   = ['rss', 'sitemap', 'taxonomy', 'term']
 defaultContentLanguage         = 'en'
 defaultContentLanguageInSubdir = true
 
+# -----------------------------------------------------------------------------
+# Languages
+# -----------------------------------------------------------------------------
+
 [languages.en]
   disable           = false
-  languageCode      = 'en-US'
-  languageDirection = 'ltr'
-  languageName      = 'English'
+  locale      = 'en-US'
+  direction = 'ltr'
+  label      = 'English'
   weight            = 1
   title             = 'Hosting Test - GitHub Pages - AsciiDoc (en)'
 
 [languages.de]
   disable           = false
-  languageCode      = 'de-DE'
-  languageDirection = 'ltr'
-  languageName      = 'Deutsch'
+  locale      = 'de-DE'
+  direction = 'ltr'
+  label      = 'Deutsch'
   weight            = 2
   title             = 'Hosting Test - GitHub Pages - AsciiDoc (de)'
+
+# -----------------------------------------------------------------------------
+# Markup
+# -----------------------------------------------------------------------------
 
 [markup.asciidocext]
   extensions           = ['asciidoctor-diagram']
   workingFolderCurrent = true
+
+# -----------------------------------------------------------------------------
+# Menus
+# -----------------------------------------------------------------------------
 
 [[menus.main]]
   name    = 'Home'
@@ -43,8 +55,23 @@ defaultContentLanguageInSubdir = true
   pageRef = '/Straßen'
   weight  = 30
 
+# -----------------------------------------------------------------------------
+# Security
+# -----------------------------------------------------------------------------
+
 [security.exec]
   allow = ['^((dart-)?sass|git|go|npx|postcss|tailwindcss|asciidoctor)$']
 
+# -----------------------------------------------------------------------------
+# Ugly URLs
+# -----------------------------------------------------------------------------
+
 [uglyURLs]
   s1 = false
+
+# -----------------------------------------------------------------------------
+# Modules
+# -----------------------------------------------------------------------------
+
+[module.hugoVersion]
+min = '0.158.0'
